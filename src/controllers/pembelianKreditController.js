@@ -29,6 +29,15 @@ module.exports = {
         }).then((resultStock) => {
             if(resultStock){
                 var stok = resultStock.stok
+                if(stok > 0){
+                    console.log("Lanjut " +stok)
+                }else{
+                    response = {
+                        status: false,
+                        data: "Stock Barang Di Sistem Sudah Habis, Silahkan Lakukan Order Barang!!"
+                    };
+                    res.status(201).send(response)
+                }
             }else{
                 response = {
                     status: false,
