@@ -4,7 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     nama_role: DataTypes.STRING,
     uid:DataTypes.STRING,
     is_aktif:DataTypes.BOOLEAN
-  }, {});
+  }, {
+    tableName: 'Roles'
+  });
   Role.associate = function(models) {
     //Role.hasOne(models.User, {as: 'user', foreignKey: 'role_id'})
   };

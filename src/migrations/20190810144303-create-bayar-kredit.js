@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       user_id: {
-        type: Sequelize.CHAR(36)
+        type: Sequelize.UUID
       },
       keterangan: {
         type: Sequelize.STRING,

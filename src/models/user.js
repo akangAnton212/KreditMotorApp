@@ -12,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     role_id: DataTypes.STRING,
     uid:DataTypes.UUIDV4,
     is_aktif: DataTypes.BOOLEAN
-  }, {});
+  }, {
+    tableName: 'Users'
+  });
 
   User.beforeSave((user, options) => {
     if (user.changed('password')) {

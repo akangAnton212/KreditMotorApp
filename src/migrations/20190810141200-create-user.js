@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.STRING(13)
       },
       role_id: {
-        type: Sequelize.CHAR(36),
+        type: Sequelize.UUID
       },
       uid: {
         type: Sequelize.UUID

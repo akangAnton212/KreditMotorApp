@@ -47,7 +47,9 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.STRING,
       allowNull: false
     }
-  }, {});
+  }, {
+    tableName: 'pembelian_kredits'
+  });
   pembelian_kredit.associate = function(models) {
     // associations can be defined here
   };

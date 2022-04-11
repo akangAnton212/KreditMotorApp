@@ -12,7 +12,7 @@ router.post('/api/login', userController.login);
 
 router.get('/api/getUsers', auth,userController.getAllUsers);
 router.get('/api/getUserById',auth, userController.getUserById);
-router.post('/api/add',auth, userController.addUser);
+router.post('/api/addUser', userController.addUser);
 router.post('/api/update',auth, userController.updateUser);
 router.post('/api/hapus',auth, userController.deleteUser);
 

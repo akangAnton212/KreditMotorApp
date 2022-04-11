@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING(13)
       },
       kendaraan_id: {
-        type: Sequelize.CHAR(36)
+        type: Sequelize.UUID
       },
       nomor_ktp: {
         type: Sequelize.STRING(50)
@@ -46,7 +46,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_id: {
-        type: Sequelize.CHAR(36)
+        type: Sequelize.UUID
       },
       createdAt: {
         allowNull: false,

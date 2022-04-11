@@ -14,7 +14,7 @@ module.exports = {
             where:{
                 is_aktif:true
             },
-            attributes: ['username', 'nama_lengkap','jenis_kelamin','alamat','telepon','role_id'],
+            attributes: ['username', 'nama_lengkap','jenis_kelamin','alamat','telepon','role_id','uid'],
             include: [{
                 model: models.Role,
                 attributes:['nama_role', 'uid']
@@ -32,7 +32,8 @@ module.exports = {
                         jenis_kelamin: res.jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan',
                         alamat: res.alamat,
                         telepon: res.telepon,
-                        role: res.Role.nama_role
+                        role: res.Role.nama_role,
+                        uid: res.uid
                     }
                 })
 
@@ -55,7 +56,7 @@ module.exports = {
                 status: false,
                 data: error
             };
-            res.status(400).send(response); 
+            res.status(500).send(response); 
         });
     },
 
@@ -66,7 +67,7 @@ module.exports = {
                 uid: req.query.id,
                 is_aktif:true
             },
-            attributes: ['username', 'nama_lengkap','jenis_kelamin','alamat','telepon','role_id'],
+            attributes: ['username', 'nama_lengkap','jenis_kelamin','alamat','telepon','role_id', 'uid'],
             include: [{
                 model: models.Role,
                 attributes:['nama_role', 'uid']
@@ -84,7 +85,8 @@ module.exports = {
                         jenis_kelamin: res.jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan',
                         alamat: res.alamat,
                         telepon: res.telepon,
-                        role: res.Role.nama_role
+                        role: res.Role.nama_role,
+                        uid: res.uid
                     }
                 })
 

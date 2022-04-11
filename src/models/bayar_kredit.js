@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     bukti_transaksi: DataTypes.STRING,
     user_id: DataTypes.STRING,
     keterangan: DataTypes.STRING
-  }, {});
+  }, {
+    tableName: 'bayar_kredits'
+  });
   bayar_kredit.associate = function(models) {
     // associations can be defined here
   };

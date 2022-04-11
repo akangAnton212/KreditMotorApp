@@ -6,7 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     harga_jual: DataTypes.DOUBLE,
     uid:DataTypes.STRING,
     is_aktif:DataTypes.BOOLEAN
-  }, {});
+  }, {
+    tableName: 'Kendaraans'
+  });
   Kendaraan.associate = function(models) {
     // associations can be defined here
   };
