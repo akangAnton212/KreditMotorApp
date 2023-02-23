@@ -14,7 +14,7 @@
     "morgan": "~1.9.1",
     "pg": "^8.2.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.13.0",
+    "sequelize": "^6.28.2",
     "uuid": "^3.3.2",
     "bcrypt-nodejs": "0.0.3",
     "jsonwebtoken": "^8.4.0",
